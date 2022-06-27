@@ -5,23 +5,32 @@
 #include "randomPicker.h"
 #include <iostream>
 #include <string>
-#include <time.h>
 
 std::string passwordGenerator(unsigned long long len, bool up, bool num, bool sym) {
-	std::string tempChars(0);
+	std::string tempChars;
 	std::string password;
 	password.resize(len);
 
 	for (int i = 0; i < password.length(); i++) {
-		srand(time(0));
-		tempChars.push_back(randomLower());
-		if (up)
-			tempChars.push_back(randomUpper());
-		if (num)
-			tempChars.push_back(randomNumber());
-		if (sym)
-			tempChars.push_back(randomSymbol());
+		char temp;
+		temp = randomLower();
+		tempChars.push_back(temp);
+		
+		if (up) {
+			temp = randomUpper();
+			tempChars.push_back(temp);
+		}
 
+		if (num) {
+			temp = randomNumber();
+			tempChars.push_back(temp);
+		}
+
+		if (sym) {
+			temp = randomSymbol();
+			tempChars.push_back(temp);
+		}
+		
 		password[i] = tempChars[rand() % tempChars.length()];
 	}
 
