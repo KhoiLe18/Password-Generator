@@ -28,6 +28,7 @@ int main() {
 	}
 	else {
 		cerr << "Not a valid choice" << endl;
+		system("pause");
 		return 1;
 	}
 
@@ -42,6 +43,7 @@ int main() {
 	}
 	else {
 		cerr << "Not a valid choice" << endl;
+		system("pause");
 		return 1;
 	}
 
@@ -56,18 +58,21 @@ int main() {
 	}
 	else {
 		cerr << "Not a valid choice" << endl;
+		system("pause");
 		return 1;
 	}
 
 	//Length v requirements check
 	if (uppercase && num && sym && length < 3) {
 		cerr << "The length is too short for that amount of requirements" << endl;
+		system("pause");
 		return 1;
 	}
 	else if (uppercase && num && length < 2 || 
 					 uppercase && sym && length < 2 ||
 					 num && sym && length < 2) {
 		cerr << "The length is too short for that amount of requirements" << endl;
+		system("pause");
 		return 1;
 	}
 
@@ -75,5 +80,6 @@ int main() {
 	cout << "Your new passowrd is:" << endl 
 			 << passwordGenerator(length, uppercase, num, sym) << endl;
 
+	system("pause");
 	return 0;
 }
