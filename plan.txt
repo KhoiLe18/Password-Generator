@@ -1,0 +1,4 @@
+1. Ask for password length
+2. Does it need uppercase characters
+3. Does it need to include numbers?
+4. Does it need to include special symbols?
