@@ -1,3 +1,6 @@
+//main.cpp
+//Author: Khoi Le
+//The main function of the password generator program
 #include "inAndOut.h"
 #include <iostream>
 
